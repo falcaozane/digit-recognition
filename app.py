@@ -40,8 +40,13 @@ def main():
         st.subheader("Confusion Matrix")
         st.text("Accuracy: {:.2f}%".format(acc_cm * 100))
         normalized_cm = (cm / cm.max()) * 255
-        st.image(normalized_cm, caption="Confusion Matrix", use_column_width=True, clamp=True)
-
+        #st.image(normalized_cm, caption="Confusion Matrix", use_column_width=True, clamp=True)
+        fig4,ax4 = plt.subplots()
+        cax = ax4.matshow(cm,cmap='Blues')
+        fig4.colorbar(cax)
+        ax4.set_xlabel('Predicted')
+        ax4.set_ylabel('True')
+        st.pyplot(fig4)
         st.write("Confusion Matrix (Numbers):")
         st.text(cm)
 
