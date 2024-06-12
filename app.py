@@ -14,7 +14,7 @@ x_train = x_train.reshape(60000, 28, 28, 1)
 x_test = x_test.reshape(10000, 28, 28, 1)
 
 # Load the trained model
-model = tf.keras.models.load_model("",compile=False)  
+model = tf.keras.models.load_model("my_model",compile=False)  
 
 # Model predictions
 y_pred_probabilities = model.predict(x_test)
