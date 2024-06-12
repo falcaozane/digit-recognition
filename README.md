@@ -1,3 +1,3 @@
 # digit-recognition
 
-Strealit webapp for handwritten digit recognition
+Streamlit webapp for handwritten digit recognition
